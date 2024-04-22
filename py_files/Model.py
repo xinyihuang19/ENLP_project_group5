@@ -86,19 +86,20 @@ def one_hot_encode(index, num_classes):
     encoding[index] = 1
     return encoding
 
-# Import the training data
-with open('//NQuAD_train_first_10k.json', 'r', encoding='utf-8') as file:
-    data_train = json.load(file)
-
-# Import the testing data
-with open('//NQuAD_test_first_2k.json', 'r', encoding='utf-8') as file:
-    data_test = json.load(file)
 
 
 def main():
     #####
     # 1. Load the data
     #####
+
+    # Import the training data
+    with open('//NQuAD_train_first_10k.json', 'r', encoding='utf-8') as file:
+        data_train = json.load(file)
+
+    # Import the testing data
+    with open('//NQuAD_test_first_2k.json', 'r', encoding='utf-8') as file:
+        data_test = json.load(file)
 
     #####
     # 2. Generate question representations for training data
